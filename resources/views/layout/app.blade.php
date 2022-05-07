@@ -81,13 +81,6 @@
                     <span>Report</span></a>
             </li>
 
-            <hr class="sidebar-divider">
-            <li class="nav-item">
-                <a class="nav-link" href="{{ route('panic') }}">
-                <img src="{{ asset('images/report.png') }}" alt="panic">
-                    <span>Panic Button</span></a>
-            </li>
-
             <!-- Divider -->
             <hr class="sidebar-divider">
 

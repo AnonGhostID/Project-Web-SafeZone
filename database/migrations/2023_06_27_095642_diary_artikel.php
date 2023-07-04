@@ -14,6 +14,7 @@ return new class extends Migration
         Schema::create('diary_artikel', function (Blueprint $table) {
             $table->id();
             $table->string('nama');
+            $table->integer('nim');
             $table->string('email')->unique();
             $table->foreign('email')->references('email')->on('users');
             $table->string('kelas');

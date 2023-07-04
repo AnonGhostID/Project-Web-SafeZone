@@ -11,7 +11,7 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('report', function (Blueprint $table) {
+        Schema::create('bimbingan_konseling', function (Blueprint $table) {
             $table->id();
             $table->string('nama');
             $table->integer('nim');
@@ -19,7 +19,6 @@ return new class extends Migration
             $table->foreign('email')->references('email')->on('users');
             $table->string('kelas');
             $table->date('tanggal');
-            $table->text('report');
             $table->timestamps();
         });
     }
@@ -29,7 +28,7 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('report');
+        Schema::dropIfExists('bimbingan_konseling');
     }
 };
 

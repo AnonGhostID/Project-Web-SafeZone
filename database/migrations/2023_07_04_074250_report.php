@@ -11,14 +11,14 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('diary_artikel', function (Blueprint $table) {
+        Schema::create('report', function (Blueprint $table) {
             $table->id();
             $table->string('nama');
             $table->string('email')->unique();
             $table->foreign('email')->references('email')->on('users');
             $table->string('kelas');
             $table->date('tanggal');
-            $table->text('diary');
+            $table->text('report');
             $table->timestamps();
         });
     }
@@ -28,6 +28,7 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('diary_artikel');
+        Schema::dropIfExists('report');
     }
 };
+

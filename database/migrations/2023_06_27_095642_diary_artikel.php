@@ -11,11 +11,10 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('diary_artikel', function (Blueprint $table) {
+        Schema::create('diaries', function (Blueprint $table) {
             $table->id();
             $table->string('nama');
-            $table->integer('nim');
-            $table->string('email')->unique();
+            $table->string('email');
             $table->foreign('email')->references('email')->on('users');
             $table->string('kelas');
             $table->date('tanggal');
@@ -29,6 +28,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('diary_artikel');
+        Schema::dropIfExists('diaries');
     }
 };

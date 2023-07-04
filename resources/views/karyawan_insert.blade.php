@@ -21,15 +21,15 @@
                         </div>
                         <div class="form-group">
                             <label>Email</label>
-                            <input type="text" name="email" class="form-control">
+                            <input type="text" name="email" class="form-control" value="{{ auth()->user()->email }}" read>
                             @error('email')
                                 {{ $message }}
                             @enderror
                         </div>
                         <div class="form-group">
                             <label>kelas</label>
-                            <textarea name="alamat" class="form-control"></textarea>
-                            @error('alamat')
+                            <input type="text" name="kelas" class="form-control">
+                            @error('kelas')
                                 {{ $message }}
                             @enderror
                         </div>

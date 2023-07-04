@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Karyawan;
+use App\Models\Diary;
 use Illuminate\Http\Request;
 
 class KaryawanController extends Controller
@@ -15,7 +15,7 @@ class KaryawanController extends Controller
     public function index()
     {
         return view('karyawan', [
-            'karyawan' => Karyawan::latest()->get()
+            'karyawan' => Diary::latest()->get()
         ]);
     }
 
@@ -26,27 +26,30 @@ class KaryawanController extends Controller
 
     public function insert_action(Request $request)
     {
+
         $request->validate([
             'nama' => 'required',
             'email' => 'required',
-            'alamat' => 'required',
-            'no_telp' => 'required'
+            'kelas' => 'required',
+            'tanggal' => 'required',
+            'diary' => 'required'
         ]);
 
-        Karyawan::create([
+        Diary::create([
             'nama' => $request->nama,
             'email' => $request->email,
-            'alamat' => $request->alamat,
-            'no_telp' => $request->no_telp,
+            'kelas' => $request->kelas,
+            'tanggal' => $request->tanggal,
+            'diary' => $request->diary,
         ]);
 
-        return redirect()->route('karyawan')->with('pesan', 'Data Berhasil Ditambahkan!');
+        return redirect()->route('dashboard')->with('pesan', 'Data Berhasil Ditambahkan!');
     }
 
     public function edit($id)
     {
         return view('karyawan_edit', [
-            'karyawan' => Karyawan::find($id)
+            'karyawan' => Diary::find($id)
         ]);
     }
 
@@ -55,24 +58,26 @@ class KaryawanController extends Controller
         $request->validate([
             'nama' => 'required',
             'email' => 'required',
-            'alamat' => 'required',
-            'no_telp' => 'required'
+            'kelas' => 'required',
+            'tanggal' => 'required',
+            'diary' => 'required'
         ]);
 
-        Karyawan::find($id)->update([
+        Diary::find($id)->update([
             'nama' => $request->nama,
             'email' => $request->email,
-            'alamat' => $request->alamat,
-            'no_telp' => $request->no_telp,
+            'kelas' => $request->kelas,
+            'tanggal' => $request->tanggal,
+            'diary' => $request->diary,
         ]);
 
-        return redirect()->route('karyawan')->with('pesan', 'Data Berhasil Diupdate!');
+        return redirect()->route('dashboard')->with('pesan', 'Data Berhasil Diupdate!');
     }
 
     public function delete($id)
     {
-        Karyawan::find($id)->delete();
+        Diary::find($id)->delete();
 
-        return redirect()->route('karyawan')->with('pesan', 'Data Berhasil Dihapus!');
+        return redirect()->route('dashboard')->with('pesan', 'Data Berhasil Dihapus!');
     }
 }

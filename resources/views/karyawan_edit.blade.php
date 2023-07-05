@@ -28,15 +28,19 @@
                             @enderror
                         </div>
                         <div class="form-group">
-                            <label>Alamat</label>
-                            <textarea name="alamat" class="form-control">{{ $karyawan->alamat }}</textarea>
-                            @error('alamat')
-                                {{ $message }}
-                            @enderror
+                            <label>Kelas</label>
+                            <input type="text" name="kelas" class="form-control" value="{{ $karyawan->kelas }}">
                         </div>
                         <div class="form-group">
-                            <label>No Telp</label>
-                            <input type="number" name="no_telp" class="form-control" value="{{ $karyawan->no_telp }}">
+                            <label>Tanggal</label>
+                            <input type="date" name="tanggal" class="form-control" value="{{ $karyawan->tanggal }}">
+                        </div>
+                        <div class="form-group">
+                            <label>Isi Diary</label>
+                            <textarea name="diary" class="form-control">{{ $karyawan->diary }}</textarea>
+                            @error('diary')
+                                {{ $message }}
+                            @enderror
                         </div>
                         <button type="submit" class="btn btn-primary btn-sm"><i class="fas fa-save"></i> Update</button>
                     </form>

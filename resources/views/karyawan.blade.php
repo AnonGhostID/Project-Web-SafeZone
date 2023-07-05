@@ -37,7 +37,7 @@
                                 <td>{{ $item->nama }}</td>
                                 <td>{{ $item->email }}</td>
                                 <td>{{ $item->kelas }}</td>
-                                <td>{{ $item->tanggal }}</td>
+                                <td>{{ date('d-m-Y', strtotime($item->tanggal)); }}</td>
                                 <td>{{ $item->diary }}</td>
                                 <td>
                                     <a href="{{ route('karyawan.edit', $item->id) }}" class="btn btn-warning btn-sm"><i

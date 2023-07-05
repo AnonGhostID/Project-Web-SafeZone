@@ -46,7 +46,7 @@
 
             <!-- Nav Item - Dashboard -->
             <li class="nav-item">
-                <a class="nav-link" href="{{ route('dashboard') }}">
+                <a class="nav-link" href="{{ route('menu') }}">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>Dashboard</span></a>
             </li>
@@ -56,7 +56,7 @@
 
              <!-- Nav Item - Dashboard -->
              <li class="nav-item">
-                <a class="nav-link" href="{{ route('dashboard') }}">
+                <a class="nav-link" href="{{ route('monitor') }}">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>Conflict Monitor</span></a>
             </li>
@@ -66,7 +66,7 @@
 
              <!-- Nav Item - Dashboard -->
              <li class="nav-item">
-                <a class="nav-link" href="{{ route('dashboard') }}">
+                <a class="nav-link" href="{{ route('Konseling') }}">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>Bimbingan Konseling</span></a>
             </li>
@@ -76,7 +76,7 @@
 
              <!-- Nav Item - Dashboard -->
              <li class="nav-item">
-                <a class="nav-link" href="{{ route('dashboard') }}">
+                <a class="nav-link" href="{{ route('Report') }}">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>Report</span></a>
             </li>
@@ -85,7 +85,7 @@
             <hr class="sidebar-divider">
 
             <li class="nav-item">
-                <a class="nav-link" href="{{ route('dashboard') }}">
+                <a class="nav-link" href="{{ route('diary') }}">
                     <i class="fas fa-fw fa-users"></i>
                     <span>Diary Artikel</span></a>
             </li>

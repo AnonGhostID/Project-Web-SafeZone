@@ -3,6 +3,8 @@
 use App\Http\Controllers\KaryawanController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
+use App\Models\Diary;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -15,9 +17,36 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('dashboard', function () {
-    return view('dashboard');
-})->name('dashboard');
+Route::get('menu', function () {
+    return view('dashboard', [
+        'karyawan' => Diary::latest()->get()
+    ]);
+})->name('menu');
+
+Route::get('monitor', function () {
+    return view('ConflictMonitor', [
+        'karyawan' => Diary::latest()->get()
+    ]);
+})->name('monitor');
+
+
+Route::get('Konseling', function () {
+    return view('Konseling', [
+        'karyawan' => Diary::latest()->get()
+    ]);
+})->name('Konseling');
+
+Route::get('Report', function () {
+    return view('Report', [
+        'karyawan' => Diary::latest()->get()
+    ]);
+})->name('Report');
+
+Route::get('diary', function () {
+    return view('karyawan', [
+        'karyawan' => Diary::latest()->get()
+    ]);
+})->name('diary');
 
 Route::get('guestDashboard', function () {
     return view('guestDashboard');

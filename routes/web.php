@@ -1,9 +1,11 @@
 <?php
 
+use App\Http\Controllers\BimbinganKonselingController;
 use App\Http\Controllers\KaryawanController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Models\Diary;
+use App\Models\BimbinganKonseling;
 
 
 /*
@@ -32,9 +34,19 @@ Route::get('monitor', function () {
 
 Route::get('Konseling', function () {
     return view('Konseling', [
-        'karyawan' => Diary::latest()->get()
+        'konseling' => BimbinganKonseling::latest()->get()
     ]);
 })->name('Konseling');
+
+
+Route::controller(BimbinganKonselingController::class)->prefix('BimbinganKonseling')->group(function () {
+    Route::get('', 'index')->name('dashboard');
+    Route::get('insert', 'insert')->name('konseling.insert');
+    Route::post('insert', 'insert_action')->name('konseling.insert.action');
+    Route::get('edit/{id}', 'edit')->name('konseling.edit');
+    Route::post('edit/{id}', 'update')->name('konseling.edit.update');
+    Route::get('delete/{id}', 'delete')->name('konseling.delete');
+});
 
 Route::get('Report', function () {
     return view('Report', [

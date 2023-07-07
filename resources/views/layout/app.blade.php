@@ -21,7 +21,6 @@
     <link href="{{ asset('template/css/sb-admin-2.min.css') }}" rel="stylesheet">
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
 
-
     <!-- Custom styles for this page -->
     <link href="{{ asset('template/vendor/datatables/dataTables.bootstrap4.min.css') }}" rel="stylesheet">
 
@@ -38,9 +37,8 @@
             <!-- Sidebar - Brand -->
             <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
                 <div class="sidebar-brand-icon">
-                    <i class="fas fa-building"></i>
+                        <img src="{{ asset('images/logo1.png') }}" alt="logo1" style="max-width: 100%;">
                 </div>
-                <div class="sidebar-brand-text mx-3">SafeZone</div>
             </a>
 
             <!-- Divider -->
@@ -49,8 +47,8 @@
             <!-- Nav Item - Dashboard -->
             <li class="nav-item">
                 <a class="nav-link" href="{{ route('menu') }}">
-                    <i class="fas fa-fw fa-tachometer-alt"></i>
-                    <span>Dashboard</span></a>
+                <img src="{{ asset('images/home.png') }}" alt="home">
+                    <span>Home</span></a>
             </li>
 
             <!-- Divider -->
@@ -59,7 +57,7 @@
              <!-- Nav Item - Dashboard -->
              <li class="nav-item">
                 <a class="nav-link" href="{{ route('monitor') }}">
-                    <i class="fas fa-fw fa-tachometer-alt"></i>
+                <img src="{{ asset('images/Cmonitor.png') }}" alt="Cmonitor">
                     <span>Conflict Monitor</span></a>
             </li>
 
@@ -69,7 +67,7 @@
              <!-- Nav Item - Dashboard -->
              <li class="nav-item">
                 <a class="nav-link" href="{{ route('Konseling') }}">
-                    <i class="fas fa-fw fa-tachometer-alt"></i>
+                <img src="{{ asset('images/konseling.png') }}" alt="konseling">
                     <span>Bimbingan Konseling</span></a>
             </li>
 
@@ -79,7 +77,7 @@
              <!-- Nav Item - Dashboard -->
              <li class="nav-item">
                 <a class="nav-link" href="{{ route('Report') }}">
-                    <i class="fas fa-fw fa-tachometer-alt"></i>
+                <img src="{{ asset('images/report.png') }}" alt="report">
                     <span>Report</span></a>
             </li>
 
@@ -88,7 +86,7 @@
 
             <li class="nav-item">
                 <a class="nav-link" href="{{ route('diary') }}">
-                    <i class="fas fa-fw fa-users"></i>
+                <img src="{{ asset('images/diary.png') }}" alt="diary">
                     <span>Diary Artikel</span></a>
             </li>
 

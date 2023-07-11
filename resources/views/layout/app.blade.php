@@ -120,6 +120,12 @@
                     <!-- Topbar Navbar -->
                     <ul class="navbar-nav ml-auto">
 
+                        <section class="hero">
+                            <div class="container">
+                                <a href="{{ route('register') }}" class="btn btn-primary" style="background-color: red">Panic button</a>
+                            </div>
+                        </section>
+
                         <div class="topbar-divider d-none d-sm-block"></div>
 
                         <!-- Nav Item - User Information -->

@@ -31,25 +31,23 @@
     <!-- Page Wrapper -->
     <div id="wrapper">
 
-        <!-- Sidebar -->
-        <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+          <!-- Sidebar -->
+          <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
             <!-- Sidebar - Brand -->
             <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
                 <div class="sidebar-brand-icon">
-                    <i class="fas fa-building"></i>
+                        <img src="{{ asset('images/logo1.png') }}" alt="logo1" style="max-width: 100%;">
                 </div>
-                <div class="sidebar-brand-text mx-3">SafeZone</div>
             </a>
 
             <!-- Divider -->
             <hr class="sidebar-divider my-0">
 
-            <!-- Nav Item - Dashboard -->
             <li class="nav-item">
-                <a class="nav-link" href="{{ route('dashboard') }}">
-                    <i class="fas fa-fw fa-tachometer-alt"></i>
-                    <span>Dashboard</span></a>
+                <a class="nav-link" href="{{ route('menu') }}">
+                <img src="{{ asset('images/home.png') }}" alt="home">
+                    <span>Home</span></a>
             </li>
 
             <!-- Divider -->
@@ -57,37 +55,38 @@
 
              <!-- Nav Item - Dashboard -->
              <li class="nav-item">
-                <a class="nav-link" href="{{ route('dashboard') }}">
-                    <i class="fas fa-fw fa-tachometer-alt"></i>
+                <a class="nav-link" href="{{ route('monitor') }}">
+                <img src="{{ asset('images/Cmonitor.png') }}" alt="Cmonitor">
                     <span>Conflict Monitor</span></a>
             </li>
 
+
             <!-- Divider -->
             <hr class="sidebar-divider">
 
              <!-- Nav Item - Dashboard -->
              <li class="nav-item">
-                <a class="nav-link" href="{{ route('dashboard') }}">
-                    <i class="fas fa-fw fa-tachometer-alt"></i>
+                <a class="nav-link" href="{{ route('Konseling') }}">
+                <img src="{{ asset('images/konseling.png') }}" alt="konseling">
                     <span>Bimbingan Konseling</span></a>
             </li>
 
+
             <!-- Divider -->
             <hr class="sidebar-divider">
 
              <!-- Nav Item - Dashboard -->
              <li class="nav-item">
-                <a class="nav-link" href="{{ route('dashboard') }}">
-                    <i class="fas fa-fw fa-tachometer-alt"></i>
+                <a class="nav-link" href="{{ route('Report') }}">
+                <img src="{{ asset('images/report.png') }}" alt="report">
                     <span>Report</span></a>
             </li>
-
             <!-- Divider -->
             <hr class="sidebar-divider">
 
             <li class="nav-item">
-                <a class="nav-link" href="{{ route('dashboard') }}">
-                    <i class="fas fa-fw fa-users"></i>
+                <a class="nav-link" href="{{ route('diary') }}">
+                <img src="{{ asset('images/diary.png') }}" alt="diary">
                     <span>Diary Artikel</span></a>
             </li>
 
@@ -111,7 +110,15 @@
                 <!-- Topbar -->
                 <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
 
+                    <section class="hero">
+                        <div class="container">
+                            <a href="{{ route('register') }}" class="btn btn-primary" style="background-color: red">Panic button</a>
+                        </div>
+                    </section>
+
                     <!-- Sidebar Toggle (Topbar) -->
+
+
                     <form class="form-inline">
                         <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
                             <i class="fa fa-bars"></i>

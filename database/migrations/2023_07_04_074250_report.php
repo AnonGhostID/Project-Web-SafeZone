@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('report', function (Blueprint $table) {
             $table->id();
             $table->string('nama');
-            $table->string('email')->unique();
+            $table->string('email');
             $table->foreign('email')->references('email')->on('users');
             $table->string('kelas');
             $table->date('tanggal');

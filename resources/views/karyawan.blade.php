@@ -1,5 +1,5 @@
 @extends('layout.app')
-@section('title', 'Dashboard')
+@section('title', 'karyawan')
 @section('content')
     <h1 class="h3 mb-2 text-gray-800">Artikel Diary</h1>
     @if (session('pesan'))

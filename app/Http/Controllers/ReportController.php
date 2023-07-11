@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\BimbinganKonseling;
+use App\Models\Report;
 use Illuminate\Http\Request;
 
-class BimbinganKonselingController extends Controller
+class ReportController extends Controller
 {
     public function __construct()
     {
@@ -14,14 +14,14 @@ class BimbinganKonselingController extends Controller
 
     public function index()
     {
-        return view('konseling', [
-            'konseling' => BimbinganKonseling::latest()->get()
+        return view('report', [
+            'report' => Report::latest()->get()
         ]);
     }
 
     public function insert()
     {
-        return view('konseling_insert');
+        return view('report_insert');
     }
 
     public function insert_action(Request $request)
@@ -31,18 +31,19 @@ class BimbinganKonselingController extends Controller
             'email' => 'required',
             'kelas' => 'required',
             'tanggal' => 'required',
+            'report' => 'required',
             // Add validation rules for other fields as needed
         ]);
 
-        BimbinganKonseling::create($request->all());
+        Report::create($request->all());
 
-        return redirect()->route('Konseling')->with('pesan', 'Tambahinnya berhasil');
+        return redirect()->route('report')->with('pesan', 'Tambahinnya berhasil');
     }
 
     public function edit($id)
     {
-        return view('konseling_edit', [
-            'konseling' => BimbinganKonseling::find($id)
+        return view('report_edit', [
+            'report' => Report::find($id)
         ]);
     }
 
@@ -53,18 +54,19 @@ class BimbinganKonselingController extends Controller
             'email' => 'required',
             'kelas' => 'required',
             'tanggal' => 'required',
+            'report' => 'required',
             // Add validation rules for other fields as needed
         ]);
 
-        BimbinganKonseling::find($id)->update($request->all());
+        Report::find($id)->update($request->all());
 
-        return redirect()->route('Konseling')->with('pesan', 'Data Berhasil Diupdate');
+        return redirect()->route('report')->with('pesan', 'Data Berhasil Diupdate');
     }
 
     public function delete($id)
     {
-        BimbinganKonseling::find($id)->delete();
+        Report::find($id)->delete();
 
-        return redirect()->route('Konseling')->with('pesan', 'Data Berhasil Dihapus!');
+        return redirect()->route('report')->with('pesan', 'Data Berhasil Dihapus!');
     }
 }

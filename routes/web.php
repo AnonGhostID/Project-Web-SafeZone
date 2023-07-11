@@ -1,11 +1,13 @@
 <?php
 
 use App\Http\Controllers\BimbinganKonselingController;
+use App\Http\Controllers\ReportController;
 use App\Http\Controllers\KaryawanController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Models\Diary;
 use App\Models\BimbinganKonseling;
+use App\Models\Report;
 
 
 /*
@@ -48,11 +50,24 @@ Route::controller(BimbinganKonselingController::class)->prefix('BimbinganKonseli
     Route::get('delete/{id}', 'delete')->name('konseling.delete');
 });
 
+
+
 Route::get('Report', function () {
     return view('Report', [
-        'karyawan' => Diary::latest()->get()
+        'report' => Report::latest()->get()
     ]);
 })->name('Report');
+
+Route::controller(ReportController::class)->prefix('report')->group(function () {
+    Route::get('', 'index')->name('report');
+    Route::get('insert', 'insert')->name('report.insert');
+    Route::post('insert', 'insert_action')->name('report.insert.action');
+    Route::get('edit/{id}', 'edit')->name('report.edit');
+    Route::post('edit/{id}', 'update')->name('report.edit.update');
+    Route::get('delete/{id}', 'delete')->name('report.delete');
+});
+
+
 
 Route::get('diary', function () {
     return view('karyawan', [

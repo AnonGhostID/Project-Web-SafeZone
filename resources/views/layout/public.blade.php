@@ -109,12 +109,24 @@
 
                 <!-- Topbar -->
                 <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
-
-                    <section class="hero">
-                        <div class="container">
-                            <a href="{{ route('register') }}" class="btn btn-primary" style="background-color: red">Panic button</a>
-                        </div>
-                    </section>
+                <div class="modal fade" id="whatsappModal" tabindex="-1" role="dialog" aria-labelledby="whatsappModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="whatsappModalLabel">WhatsApp Group Link</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>Click the button below to join our WhatsApp group:</p>
+                    <a href="https://chat.whatsapp.com/GmGG3Pp5NAkD1uc1chTnLc" class="btn btn-success" target="_blank">Join WhatsApp Group</a>
+                </div>
+            </div>
+        </div>
+    </div>
+                <button id="panicButton" class="btn btn-danger" data-toggle="modal" data-target="#whatsappModal">Panic Button</button>
+                
 
                     <!-- Sidebar Toggle (Topbar) -->
 

@@ -40,6 +40,31 @@
                         </div>
 
                         <div class="row mb-3">
+                            <label class="col-md-4 col-form-label text-md-end">{{ __('Account Type') }}</label>
+
+                            <div class="col-md-6">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="account_type" id="adminRadio" value="admin" {{ old('account_type') === 'admin' ? 'checked' : '' }}>
+                                    <label class="form-check-label" for="adminRadio">
+                                        {{ __('Admin') }}
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="account_type" id="userRadio" value="user" {{ old('account_type') === 'user' ? 'checked' : '' }}>
+                                    <label class="form-check-label" for="userRadio">
+                                        {{ __('User') }}
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="account_type" id="teacherRadio" value="teacher" {{ old('account_type') === 'teacher' ? 'checked' : '' }}>
+                                    <label class="form-check-label" for="teacherRadio">
+                                        {{ __('Teacher') }}
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row mb-3">
                             <div class="col-md-6 offset-md-4">
                                 <div class="form-check">
                                     <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>

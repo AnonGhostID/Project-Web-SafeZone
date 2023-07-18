@@ -29,7 +29,8 @@ Route::get('menu', function () {
 
 Route::get('monitor', function () {
     return view('ConflictMonitor', [
-        'karyawan' => Diary::latest()->get()
+        // 'karyawan' => Diary::latest()->get()
+        'report' => Report::latest()->get()
     ]);
 })->name('monitor');
 
@@ -74,6 +75,13 @@ Route::get('diary', function () {
         'karyawan' => Diary::latest()->get()
     ]);
 })->name('diary');
+
+Route::get('panic', function () {
+    return view('panic', [
+        // 'karyawan' => Diary::latest()->get()
+        'report' => Report::latest()->get()
+    ]);
+})->name('panic');
 
 Route::get('guestDashboard', function () {
     return view('guestDashboard');

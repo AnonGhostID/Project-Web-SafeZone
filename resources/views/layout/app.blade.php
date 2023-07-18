@@ -97,6 +97,14 @@
                     <span>Diary Artikel</span></a>
             </li>
 
+            <hr class="sidebar-divider">
+
+            <li class="nav-item">
+                <a class="nav-link" href="{{ route('list') }}">
+                <img src="{{ asset('images/diary.png') }}" alt="list">
+                    <span>List User</span></a>
+            </li>
+
             <!-- Divider -->
             <hr class="sidebar-divider d-none d-md-block">
 

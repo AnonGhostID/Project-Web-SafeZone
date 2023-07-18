@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\Route;
 use App\Models\Diary;
 use App\Models\BimbinganKonseling;
 use App\Models\Report;
+use App\Models\User;
 
 
 /*
@@ -82,6 +83,13 @@ Route::get('panic', function () {
         'report' => Report::latest()->get()
     ]);
 })->name('panic');
+
+Route::get('list', function () {
+    return view('list', [
+        // 'karyawan' => Diary::latest()->get()
+        'user' => User::latest()->get()
+    ]);
+})->name('list');
 
 Route::get('guestDashboard', function () {
     return view('guestDashboard');

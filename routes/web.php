@@ -38,7 +38,8 @@ Route::get('monitor', function () {
 
 Route::get('Konseling', function () {
     return view('Konseling', [
-        'konseling' => BimbinganKonseling::latest()->get()
+        'konseling' => BimbinganKonseling::latest()->get(),
+        'user' => Auth::user(),
     ]);
 })->name('Konseling');
 
@@ -71,11 +72,6 @@ Route::controller(ReportController::class)->prefix('report')->group(function () 
 
 
 
-Route::get('diary', function () {
-    return view('karyawan', [
-        'karyawan' => Diary::latest()->get()
-    ]);
-})->name('diary');
 
 Route::get('panic', function () {
     return view('panic', [
@@ -94,6 +90,13 @@ Route::get('list', function () {
 Route::get('guestDashboard', function () {
     return view('guestDashboard');
 })->name('guestDashboard');
+
+Route::get('diary', function () {
+    return view('karyawan', [
+        'karyawan' => Diary::latest()->get(),
+        'user' => Auth::user(),
+    ]);
+})->name('diary');
 
 Route::controller(KaryawanController::class)->prefix('karyawan')->group(function () {
     Route::get('', 'index')->name('dashboard');

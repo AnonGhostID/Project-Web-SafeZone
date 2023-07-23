@@ -26,7 +26,9 @@
                             <th>kelas</th>
                             <th>tanggal</th>
                             <th>diary</th>
+                            @if ($user->role == '1')
                             <th>Action</th>
+                            @endif
                         </tr>
                     </thead>
                     <tbody>
@@ -39,6 +41,7 @@
                                 <td>{{ $item->kelas }}</td>
                                 <td>{{ date('d-m-Y', strtotime($item->tanggal)); }}</td>
                                 <td>{{ $item->diary }}</td>
+                                @if ($user->role == '1')
                                 <td>
                                     <a href="{{ route('karyawan.edit', $item->id) }}" class="btn btn-warning btn-sm"><i
                                             class="fas fa-edit"></i> Edit</a>
@@ -46,6 +49,7 @@
                                         onclick="return confirm('Apakah yakin menghapus data ini?')"><i
                                             class="fas fa-trash"></i> Hapus</a>
                                 </td>
+                                @endif
                             </tr>
                         @endforeach
                     </tbody>

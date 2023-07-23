@@ -26,10 +26,10 @@ class HomeController extends Controller
     {
         $user = Auth::user();
         if($user->role == 1){
-            return redirect(route(''));
+            return redirect(route('menu'));
         }elseif ($user->role == 2) {
             return redirect(route(''));
-        }else{  
+        }else{
             return redirect(route('menu'));
         }
     }

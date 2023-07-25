@@ -22,7 +22,7 @@ use App\Models\User;
 |
 */
 
-Route::get('menu', function () {
+Route::get('/menu', function () {
     return view('dashboard', [
         'karyawan' => Diary::latest()->get()
     ]);

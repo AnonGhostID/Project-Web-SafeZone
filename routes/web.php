@@ -9,6 +9,7 @@ use App\Models\Diary;
 use App\Models\BimbinganKonseling;
 use App\Models\Report;
 use App\Models\User;
+use App\Events\MyEvent;
 
 
 /*
@@ -21,6 +22,11 @@ use App\Models\User;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
+Route::post('/panicbutton', function(){
+    $message = auth()->user()->name;
+    event(new MyEvent($message));
+    return redirect()->route('menu');
+})->name('panicbutton');
 
 Route::get('/menu', function () {
     return view('dashboard', [

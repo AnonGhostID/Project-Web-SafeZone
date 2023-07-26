@@ -138,7 +138,11 @@
                 </div>
                 <div class="modal-body">
                     <p>Click the button below to join our WhatsApp group:</p>
-                    <a href="https://chat.whatsapp.com/GmGG3Pp5NAkD1uc1chTnLc" class="btn btn-success" target="_blank">Join WhatsApp Group</a>
+                    <form action="{{ route('panicbutton') }}" method="post">
+                    @csrf
+                    <button type="submit" class="btn btn-danger">Click</button>
+                    </form>
+                    {{-- <a href="https://chat.whatsapp.com/GmGG3Pp5NAkD1uc1chTnLc" class="btn btn-success" target="_blank">Join WhatsApp Group</a> --}}
                 </div>
             </div>
         </div>
@@ -249,6 +253,21 @@
     <!-- Page level custom scripts -->
     <script src="{{ asset('template/js/demo/datatables-demo.js') }}"></script>
 
+    <script src="https://js.pusher.com/8.2.0/pusher.min.js"></script>
+  <script>
+
+    // Enable pusher logging - don't include this in production
+    Pusher.logToConsole = true;
+
+    var pusher = new Pusher('d33092956f4cf52854ad', {
+      cluster: 'ap1'
+    });
+
+    var channel = pusher.subscribe('my-channel');
+    channel.bind('my-event', function(data) {
+      alert(JSON.stringify(data));
+    });
+  </script>
 </body>
 
 </html>

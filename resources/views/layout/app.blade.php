@@ -53,14 +53,14 @@
 
             <!-- Divider -->
             <hr class="sidebar-divider">
-
+            @if(auth()->user()->role == 1 )
              <!-- Nav Item - Dashboard -->
              <li class="nav-item">
                 <a class="nav-link" href="{{ route('monitor') }}">
                 <img src="{{ asset('images/Cmonitor.png') }}" alt="Cmonitor">
                     <span>Conflict Monitor</span></a>
             </li>
-
+            @endif      
             <!-- Divider -->
             <hr class="sidebar-divider">
 
@@ -89,7 +89,7 @@
                 <img src="{{ asset('images/diary.png') }}" alt="diary">
                     <span>Diary Artikel</span></a>
             </li>
-
+            @if(auth()->user()->role == 1 )
             <hr class="sidebar-divider">
 
             <li class="nav-item">
@@ -97,7 +97,7 @@
                 <img src="{{ asset('images/diary.png') }}" alt="list">
                     <span>List User</span></a>
             </li>
-
+            @endif
             <!-- Divider -->
             <hr class="sidebar-divider d-none d-md-block">
 

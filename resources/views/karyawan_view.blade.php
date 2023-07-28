@@ -4,16 +4,17 @@
         <div class="row g-5">
             <div class="col-md-8">
                 <h3 class="pb-4 mb-4 fst-italic border-bottom">
-
+                    <a href="{{ route('diary') }}" class="btn btn-danger btn-sm"><i
+                            class="fas fa-edit"></i> Back</a>
                 </h3>
 
                 <article class="blog-post">
-                    <h2 class="display-5 link-body-emphasis mb-1">{{$diary->nama}}</h2>
-                    <p class="blog-post-meta">{{$diary->tanggal}}
+                    <h2 class="display-5 link-body-emphasis mb-1">{{ $diary->nama }}</h2>
+                    <p class="blog-post-meta">{{ $diary->tanggal }}
 
-                    <p>{{$diary->diary}}</p>
+                    <p>{{ $diary->diary }}</p>
 
-                {{-- <article class="blog-post">
+                    {{-- <article class="blog-post">
                     <h2 class="display-5 link-body-emphasis mb-1">Another blog post</h2>
                     <p class="blog-post-meta">December 23, 2020 by <a href="#">Jacob</a></p>
 
@@ -82,7 +83,7 @@
                         highly repetitive body text used throughout.</p>
                 </article> --}}
 
-                {{-- <nav class="blog-pagination" aria-label="Pagination">
+                    {{-- <nav class="blog-pagination" aria-label="Pagination">
                     <a class="btn btn-outline-primary rounded-pill" href="#">Older</a>
                     <a class="btn btn-outline-secondary rounded-pill disabled" aria-disabled="true">Newer</a>
                 </nav> --}}

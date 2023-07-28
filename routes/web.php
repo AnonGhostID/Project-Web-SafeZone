@@ -111,6 +111,7 @@ Route::controller(KaryawanController::class)->prefix('karyawan')->group(function
     Route::get('edit/{id}', 'edit')->name('karyawan.edit');
     Route::post('edit/{id}', 'update')->name('karyawan.edit.update');
     Route::get('delete/{id}', 'delete')->name('karyawan.delete');
+    Route::get('view/{id}', 'view')->name('karyawan.view');
 });
 
 Auth::routes();

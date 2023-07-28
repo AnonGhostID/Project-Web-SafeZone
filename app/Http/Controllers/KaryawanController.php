@@ -43,7 +43,7 @@ class KaryawanController extends Controller
             'diary' => $request->diary,
         ]);
 
-        return redirect()->route('dashboard')->with('pesan', 'Data Berhasil Ditambahkan!');
+        return redirect()->route('diary')->with('pesan', 'Data Berhasil Ditambahkan!');
     }
 
     public function edit($id)
@@ -71,13 +71,20 @@ class KaryawanController extends Controller
             'diary' => $request->diary,
         ]);
 
-        return redirect()->route('dashboard')->with('pesan', 'Data Berhasil Diupdate!');
+        return redirect()->route('diary')->with('pesan', 'Data Berhasil Diupdate!');
     }
 
     public function delete($id)
     {
         Diary::find($id)->delete();
 
-        return redirect()->route('dashboard')->with('pesan', 'Data Berhasil Dihapus!');
+        return redirect()->route('diary')->with('pesan', 'Data Berhasil Dihapus!');
+    }
+
+    public function view($id)
+    {
+        $diary = Diary::find($id);
+
+        return view('karyawan_view', compact('diary'));
     }
 }

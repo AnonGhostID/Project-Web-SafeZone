@@ -1,4 +1,20 @@
 .sidebar {
-    background-image: linear-gradient(to bottom, #ff0000, #0000ff);
+    background-image: linear-gradient(to bottom, #64daac, #0000ff);
     /* Replace with your desired gradient */
 }
+
+.navbar {
+    background-color: #4e73df; /* Replace this with your desired green color */
+    color: #fff; /* Set the text color to white */
+    font-weight: bold; /* Set the font weight to bold */
+}
+
+.nav-link .nav-link.dropdown-toggle .text-gray-600 {
+    color: #fff; /* Set the text color to white */ 
+    font-weight: bold;
+}
+
+
+
+
+

@@ -116,7 +116,7 @@
             <div id="content">
 
                 <!-- Topbar -->
-                <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+                <nav class="navbar navbar-expand navbar-light topbar mb-4 static-top shadow">
                 <div class="modal fade" id="whatsappModal" tabindex="-1" role="dialog" aria-labelledby="whatsappModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
@@ -159,7 +159,7 @@
                         <li class="nav-item dropdown no-arrow">
                             <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <span class="mr-2 d-none d-lg-inline text-gray-600 small">{{ Auth::user()->name }}</span>
+                                <span class="mr-2 d-none d-lg-inline text-white-600 big">{{ Auth::user()->name }}</span>
                                 <img class="img-profile rounded-circle"
                                     src="{{ asset('template/img/undraw_profile.svg') }}">
                             </a>
@@ -257,7 +257,7 @@
     <script src="https://js.pusher.com/8.2.0/pusher.min.js"></script>
   <script>
 
-    // Enable pusher logging - don't include this in production
+    // Enable pusher logging
     Pusher.logToConsole = true;
 
     var pusher = new Pusher('d33092956f4cf52854ad', {

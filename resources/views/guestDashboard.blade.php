@@ -14,26 +14,23 @@
         <section class="hero">
             <div class="container">
                 <h1>Welcome to SafeZone</h1>
-                <p>Create a safe and secure educational environment for students with SafeZone.</p>
+                <p>Untuk mengakses Seluruh fitur utama SafeZone disarankan untuk melakukan register terlebih dahulu</p>
                 <a href="{{ route('register') }}" class="btn btn-primary">Get Started</a>
             </div>
         </section>
-
-        <br>
-
-        <td>
-        <img src="{{ asset('images/logohome.png') }}" alt="logohome"  style="left; margin-left: 120px;" >
-        </td>
-
-        <br>
-
-        <td>
-        <img src="{{ asset('images/orang1.png') }}" alt="orang1"  style="left; margin-left: 70px;" >
-        </td>
-
-        <br>
-
-        <br>
+    
+        <div style="display: flex; justify-content: center; align-items: center; height: 100vh;">
+    <table>
+        <tr>
+            <td style="display: flex; justify-content: center; align-items: center;">
+                <img src="{{ asset('images/logohome.png') }}" alt="logohome" style="max-width: 100%;">
+            </td>
+            <td style="display: flex; justify-content: center; align-items: center;">
+                <img src="{{ asset('images/orang1.png') }}" alt="orang1" style="max-width: 100%;">
+            </td>
+        </tr>
+    </table>
+        </div>
 
         <div class="container">
                 <h1>Welcome to SafeZone</h1>
@@ -41,8 +38,7 @@
                 <br>
             </div>
 
-        <br>
-
+       
         <section class="features">
             <div class="container">
                 <h2>Features</h2>

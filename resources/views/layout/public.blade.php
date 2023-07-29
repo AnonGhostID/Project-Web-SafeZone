@@ -45,7 +45,7 @@
             <hr class="sidebar-divider my-0">
 
             <li class="nav-item">
-                <a class="nav-link" href="{{ route('menu') }}">
+                <a class="nav-link" href="{{ route('guestDashboard') }}">
                 <img src="{{ asset('images/home.png') }}" alt="home">
                     <span>Home</span></a>
             </li>
@@ -55,7 +55,8 @@
 
              <!-- Nav Item - Dashboard -->
              <li class="nav-item">
-                <a class="nav-link" href="{{ route('monitor') }}">
+                <!-- <a class="nav-link" href="{{ route('monitor') }}"> -->
+                <a class="nav-link" href="#" data-toggle="popover" data-trigger="focus" title="Login Required" data-content="Please login first.">
                 <img src="{{ asset('images/Cmonitor.png') }}" alt="Cmonitor">
                     <span>Conflict Monitor</span></a>
             </li>
@@ -66,18 +67,18 @@
 
              <!-- Nav Item - Dashboard -->
              <li class="nav-item">
-                <a class="nav-link" href="{{ route('Konseling') }}">
-                <img src="{{ asset('images/konseling.png') }}" alt="konseling">
+                    <!-- <a class="nav-link" href="{{ route('monitor') }}"> -->
+                    <a class="nav-link" href="#" data-toggle="popover" data-trigger="focus" title="Login Required" data-content="Please login first.">
+                    <img src="{{ asset('images/konseling.png') }}" alt="konseling">
                     <span>Bimbingan Konseling</span></a>
             </li>
-
-
             <!-- Divider -->
             <hr class="sidebar-divider">
 
              <!-- Nav Item - Dashboard -->
              <li class="nav-item">
-                <a class="nav-link" href="{{ route('Report') }}">
+                <!-- <a class="nav-link" href="{{ route('Report') }}"> -->
+                <a class="nav-link" href="#" data-toggle="popover" data-trigger="focus" title="Login Required" data-content="Please login first.">
                 <img src="{{ asset('images/report.png') }}" alt="report">
                     <span>Report</span></a>
             </li>
@@ -85,7 +86,8 @@
             <hr class="sidebar-divider">
 
             <li class="nav-item">
-                <a class="nav-link" href="{{ route('diary') }}">
+                <!-- <a class="nav-link" href="{{ route('diary') }}"> -->
+                <a class="nav-link" href="#" data-toggle="popover" data-trigger="focus" title="Login Required" data-content="Please login first.">
                 <img src="{{ asset('images/diary.png') }}" alt="diary">
                     <span>Diary Artikel</span></a>
             </li>
@@ -108,19 +110,23 @@
             <div id="content">
 
                 <!-- Topbar -->
-                <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+                <nav class="navbar navbar-expand navbar-light topbar mb-4 static-top shadow">
                 <div class="modal fade" id="whatsappModal" tabindex="-1" role="dialog" aria-labelledby="whatsappModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="whatsappModalLabel">WhatsApp Group Link</h5>
+                    <h5 class="modal-title" id="whatsappModalLabel">EMERGENCY BUTTON</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
                 <div class="modal-body">
-                    <p>Click the button below to join our WhatsApp group:</p>
-                    <a href="https://chat.whatsapp.com/GmGG3Pp5NAkD1uc1chTnLc" class="btn btn-success" target="_blank">Join WhatsApp Group</a>
+                    <p>Login first to access:</p>
+                    <form action="{{ route('panicbutton') }}" method="post">
+                    @csrf
+                   
+                    </form>
+                    {{-- <a href="https://chat.whatsapp.com/GmGG3Pp5NAkD1uc1chTnLc" class="btn btn-success" target="_blank">Join WhatsApp Group</a> --}}
                 </div>
             </div>
         </div>
@@ -169,7 +175,7 @@
             <footer class="sticky-footer bg-white">
                 <div class="container my-auto">
                     <div class="copyright text-center my-auto">
-                        <span>Copyright &copy; Your Website 2020</span>
+                        <span>Copyright &copy; TOP-G</span>
                     </div>
                 </div>
             </footer>
@@ -222,6 +228,14 @@
 
     <!-- Page level custom scripts -->
     <script src="{{ asset('template/js/demo/datatables-demo.js') }}"></script>
+
+    <!-- Initialize Popovers -->
+<script>
+    $(document).ready(function () {
+        $('[data-toggle="popover"]').popover();
+    });
+</script>
+
 
 </body>
 

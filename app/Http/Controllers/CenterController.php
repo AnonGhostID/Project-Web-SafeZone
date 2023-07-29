@@ -37,5 +37,22 @@ class CenterController extends Controller
         return redirect()->route('list')->with('pesan', 'Data Berhasil Dihapus!');
     }
 
+    public function index ()
+    {
+        $karyawan = Diary::latest()->get();
+        $diaryCount= Diary::count();
+
+        $user = User::latest()->get();
+        $userCount = User::count();
+
+        $report = Report::latest()->get();
+        $reportCount = Report::count();
+
+        $konseling = BimbinganKonseling::latest()->get();
+        $konselingCount = BimbinganKonseling::count();
+
+        return view('dashboard',compact('user','karyawan','report','konseling','diaryCount','userCount','reportCount','konselingCount'));
+    }
+
 
 }

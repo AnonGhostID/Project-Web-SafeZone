@@ -130,4 +130,7 @@ Route::get('edit/{id}', [CenterController::class,'edit'])->name('list.edit');
 Route::get('delete/{id}', [CenterController::class,'delete'])->name('list.delete');
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
+Route::get('/menu',[CenterController::class,'index'])->name('menu');
+
+
 

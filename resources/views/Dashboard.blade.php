@@ -18,7 +18,7 @@
                 <a href="{{ route('register') }}" class="btn btn-primary">Get Started</a>
             </div>
         </section>
-        
+
         <div style="display: flex; justify-content: center; align-items: center; height: 100vh;">
     <table>
         <tr>
@@ -32,14 +32,52 @@
     </table>
         </div>
 
+        <section class="tab">
+        <div class="row row-cols-4">
+                    <!-- <div class="col">
+                        <div class="card" style="width: 18rem;">
+                            <div class="card-body">
+                                <h1 class="card-title">{{ $userCount }}</h1>
+                                <p class="card-text">USER</p>
+                                <a href="{{ route('list') }}" class="btn btn-primary">Check</a>
+                            </div>
+                        </div>
+                    </div> -->
+                    <div class="col">
+                        <div class="card" style="width: 18rem;">
+                            <div class="card-body">
+                                <h1 class="card-title">{{ $diaryCount }}</h1>
+                                <p class="card-text">DIARY</p>
+                                <a href="{{ route('diary') }}" class="btn btn-primary">Check</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- <div class="col">
+                        <div class="card" style="width: 18rem;">
+                            <div class="card-body">
+                                <h1 class="card-title">{{ $reportCount }}</h1>
+                                <p class="card-text">REPORT</p>
+                                <a href="{{ route('monitor') }}" class="btn btn-primary">Check</a>
+                            </div>
+                        </div>
+                    </div> -->
+                    <div class="col">
+                        <div class="card" style="width: 18rem;">
+                            <div class="card-body">
+                                <h1 class="card-title">{{ $konselingCount }}</h1>
+                                <p class="card-text">KONSELING</p>
+                                <a href="{{ route('Konseling') }}" class="btn btn-primary">Check</a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+<br>
         <div class="container">
                 <h1>Welcome to SafeZone</h1>
                 <p>Ciptakan lingkungan pendidikan yang aman dan nyaman untuk siswa dan mahasiswa dengan SafeZone. Aplikasi kami dirancang khusus untuk melindungi Anda dari ancaman pembullyan dan keadaan darurat di lingkungan sekolah atau kampus. Dengan fitur-fitur inovatif dan dukungan cepat, kami berkomitmen untuk meningkatkan keselamatan dan kesejahteraan Anda..</p>
                 <br>
             </div>
-
-        <br>    
-
+        
         <section class="features">
             <div class="container">
                 <h2>Features</h2>

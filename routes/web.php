@@ -3,6 +3,7 @@
 use App\Http\Controllers\BimbinganKonselingController;
 use App\Http\Controllers\ReportController;
 use App\Http\Controllers\KaryawanController;
+use App\Http\Controllers\CenterController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Models\Diary;
@@ -124,5 +125,9 @@ Route::get('/', function () {
     }
 });
 
+
+Route::get('edit/{id}', [CenterController::class,'edit'])->name('list.edit');
+Route::get('delete/{id}', [CenterController::class,'delete'])->name('list.delete');
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
 

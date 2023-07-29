@@ -32,11 +32,15 @@
                             <tr class="text-center">
                                 <td>{{ $no++ }}</td>
                                 <td>{{ $item->name }}</td>
-                                <td>{{ $item->role }}</td>
+                                <td> @if($item->role==0)
+                                     user
+                                    @else
+                                admin
+                            @endif</td>
                                 <td>
-                                    <a href="{{ route('karyawan.edit', $item->id) }}" class="btn btn-warning btn-sm"><i
+                                    <a href="{{ route('list.edit', $item->id) }}" class="btn btn-warning btn-sm"><i
                                             class="fas fa-edit"></i> Edit</a>
-                                    <a href="{{ route('karyawan.delete', $item->id) }}" class="btn btn-danger btn-sm"
+                                    <a href="{{ route('list.delete', $item->id) }}" class="btn btn-danger btn-sm"
                                         onclick="return confirm('Apakah yakin menghapus data ini?')"><i
                                             class="fas fa-trash"></i> Hapus</a>
                                 </td>

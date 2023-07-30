@@ -60,33 +60,6 @@
                                 <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">
                             </div>
                         </div>
-
-                        <!-- Add the radio button for selecting admin or user -->
-                        <div class="row mb-3">
-                            <label class="col-md-4 col-form-label text-md-end">{{ __('Account Type') }}</label>
-
-                            <div class="col-md-6">
-                                <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="account_type" id="adminRadio" value="admin">
-                                    <label class="form-check-label" for="adminRadio">
-                                        {{ __('Admin') }}
-                                    </label>
-                                </div>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="account_type" id="userRadio" value="user" checked>
-                                    <label class="form-check-label" for="userRadio">
-                                        {{ __('User') }}
-                                    </label>
-                                </div>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="account_type" id="userRadio" value="user" checked>
-                                    <label class="form-check-label" for="userRadio">
-                                        {{ __('Guru') }}
-                                    </label>
-                                </div>
-                            </div>
-                        </div>
-
                         <div class="row mb-0">
                             <div class="col-md-6 offset-md-4">
                                 <button type="submit" class="btn btn-primary">

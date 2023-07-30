@@ -51,15 +51,15 @@
             </li>
 
             <!-- Divider -->
-            <hr class="sidebar-divider">
+            {{-- <hr class="sidebar-divider"> --}}
 
-             <!-- Nav Item - Dashboard -->
+             {{-- <!-- Nav Item - Dashboard -->
              <li class="nav-item">
                 <!-- <a class="nav-link" href="{{ route('monitor') }}"> -->
                 <a class="nav-link" href="#" data-toggle="popover" data-trigger="focus" title="Login Required" data-content="Please login first.">
                 <img src="{{ asset('images/Cmonitor.png') }}" alt="Cmonitor">
                     <span>Conflict Monitor</span></a>
-            </li>
+            </li> --}}
 
 
             <!-- Divider -->
@@ -124,7 +124,7 @@
                     <p>Login first to access:</p>
                     <form action="{{ route('panicbutton') }}" method="post">
                     @csrf
-                   
+
                     </form>
                     {{-- <a href="https://chat.whatsapp.com/GmGG3Pp5NAkD1uc1chTnLc" class="btn btn-success" target="_blank">Join WhatsApp Group</a> --}}
                 </div>
@@ -132,7 +132,7 @@
         </div>
     </div>
                 <button id="panicButton" class="btn btn-danger" data-toggle="modal" data-target="#whatsappModal">Panic Button</button>
-                
+
 
                     <!-- Sidebar Toggle (Topbar) -->
 

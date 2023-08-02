@@ -60,7 +60,7 @@
                 <img src="{{ asset('images/Cmonitor.png') }}" alt="Cmonitor">
                     <span>Conflict Monitor</span></a>
             </li>
-            @endif      
+            @endif
             <!-- Divider -->
             <hr class="sidebar-divider">
 
@@ -121,13 +121,13 @@
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="whatsappModalLabel">WhatsApp Group Link</h5>
+                    <h5 class="modal-title" id="whatsappModalLabel">Apa anda yakin</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
                 <div class="modal-body">
-                    <p>Click the button below to join our WhatsApp group:</p>
+                    <p>PANIC BUTTON</p>
                     <form action="{{ route('panicbutton') }}" method="post">
                     @csrf
                     <button type="submit" class="btn btn-danger">Click</button>
@@ -150,7 +150,7 @@
 
                     <!-- Topbar Navbar -->
                     <ul class="navbar-nav ml-auto">
-                  
+
 
 
                         <div class="topbar-divider d-none d-sm-block"></div>

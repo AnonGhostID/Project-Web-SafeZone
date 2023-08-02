@@ -33,13 +33,15 @@
         </div>
 
         <section class="tab">
-        <div class="row row-cols-4">
-                    <!-- <div class="col">
+        <div class="row row-cols-5">
+                    <div class="col">
                         <div class="card" style="width: 18rem;">
                             <div class="card-body">
                                 <h1 class="card-title">{{ $userCount }}</h1>
                                 <p class="card-text">USER</p>
+                                @if(auth()->user()->role == 1 )
                                 <a href="{{ route('list') }}" class="btn btn-primary">Check</a>
+                                @endif
                             </div>
                         </div>
                     </div> -->
@@ -48,25 +50,31 @@
                             <div class="card-body">
                                 <h1 class="card-title">{{ $diaryCount }}</h1>
                                 <p class="card-text">DIARY</p>
+                                @if(auth()->user()->role == 1 )
                                 <a href="{{ route('diary') }}" class="btn btn-primary">Check</a>
+                                @endif
                             </div>
                         </div>
                     </div>
-                    <!-- <div class="col">
+                    <div class="col">
                         <div class="card" style="width: 18rem;">
                             <div class="card-body">
                                 <h1 class="card-title">{{ $reportCount }}</h1>
                                 <p class="card-text">REPORT</p>
+                                @if(auth()->user()->role == 1 )
                                 <a href="{{ route('monitor') }}" class="btn btn-primary">Check</a>
+                                @endif
                             </div>
                         </div>
-                    </div> -->
+                    </div>
                     <div class="col">
                         <div class="card" style="width: 18rem;">
                             <div class="card-body">
                                 <h1 class="card-title">{{ $konselingCount }}</h1>
                                 <p class="card-text">KONSELING</p>
+                                @if(auth()->user()->role == 1 )
                                 <a href="{{ route('Konseling') }}" class="btn btn-primary">Check</a>
+                                @endif
                             </div>
                         </div>
                     </div>
@@ -77,7 +85,7 @@
                 <p>Ciptakan lingkungan pendidikan yang aman dan nyaman untuk siswa dan mahasiswa dengan SafeZone. Aplikasi kami dirancang khusus untuk melindungi Anda dari ancaman pembullyan dan keadaan darurat di lingkungan sekolah atau kampus. Dengan fitur-fitur inovatif dan dukungan cepat, kami berkomitmen untuk meningkatkan keselamatan dan kesejahteraan Anda..</p>
                 <br>
             </div>
-        
+
         <section class="features">
             <div class="container">
                 <h2>Features</h2>

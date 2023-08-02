@@ -24,7 +24,7 @@ use App\Events\MyEvent;
 |
 */
 Route::post('/panicbutton', function(){
-    $message = auth()->user()->name .'kontol';
+    $message = auth()->user()->name . ' ' .'Request to backup' ;
     event(new MyEvent($message));
     return redirect()->route('menu');
 })->name('panicbutton');

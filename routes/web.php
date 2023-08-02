@@ -24,7 +24,7 @@ use App\Events\MyEvent;
 |
 */
 Route::post('/panicbutton', function(){
-    $message = auth()->user()->name;
+    $message = auth()->user()->name .'kontol';
     event(new MyEvent($message));
     return redirect()->route('menu');
 })->name('panicbutton');
